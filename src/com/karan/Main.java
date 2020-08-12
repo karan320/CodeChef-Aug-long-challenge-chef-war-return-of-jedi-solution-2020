@@ -1,10 +1,11 @@
 package com.karan;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
-import java.util.*;
+
 
 public class Main {
     private static final FastReader in =  new FastReader();
@@ -19,14 +20,13 @@ public class Main {
                 if (h < 0) {
                     out.println("1");
                 }
-                for (int i = 0; h > 0; i++) {
+                while(h > 0) {
                     p = (long) Math.floor(p / 2);
                     h = h - p;//
                     if (p == 0) {
                         out.println("0");
                         break;
                     }
-
                 }
                 if (h == 0 || h<0)
                     out.println("1");
