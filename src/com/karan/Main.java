@@ -26,12 +26,9 @@ public class Main {
                         out.println("0");
                         break;
                     }
-                    if (h < 0) {
-                        out.println("1");
-                        break;
-                    }
+
                 }
-                if (h == 0)
+                if (h == 0 || h<0)
                     out.println("1");
 
                 test--;
