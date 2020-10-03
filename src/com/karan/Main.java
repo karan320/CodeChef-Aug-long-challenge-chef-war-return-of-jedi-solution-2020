@@ -12,27 +12,19 @@ public class Main {
     private static final PrintWriter out = new PrintWriter(System.out);
     public static void main(String[] args){
         int test = in.nextInt();
-        while(test >= 1 && test <= Math.pow(10,5)){
+        while(test-->0){
             long h = in.nextLong();
             long p = in.nextLong();
-            if((p >= 1 && p<= Math.pow(10,5)) && (h >= 1 && h<=Math.pow(10,6))){
-                h = h - p;
-                if (h < 0) {
-                    out.println("1");
+            if((p>0) && (h>0)){
+                    p = Math.floor(p / 2);
+                    h = h - p;
                 }
-                while(h > 0) {
-                    p = (long) Math.floor(p / 2);
-                    h = h - p;//
-                    if (p == 0) {
-                        out.println("0");
-                        break;
-                    }
-                }
-                if (h == 0 || h<0)
-                    out.println("1");
-
-                test--;
-            }
+          if(h<=0){
+	        out.println(1);
+	    }
+	    else{
+	        out.println(0);
+	    }
         }
         out.flush();
         out.close();
